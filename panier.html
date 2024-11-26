@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Panier - Terres de Café</title>
+    <link rel="stylesheet" href="panier_style.css">
+</head>
+<body>
+    <div class="cart-container" id="cart-container">
+        <div class="nav">
+            <h1>Terres de Café</h1>
+            <a href="shop.html">Retour aux produits</a>
+        </div>
+
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>PRODUIT</th>
+                    <th>PRIX</th>
+                    <th>QUANTITÉ</th>
+                    <th>TOTAL</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Les articles du panier seront insérés ici -->
+            </tbody>
+        </table>
+
+    </div>
+    <div class="cart-total" id="cart-total" style="text-align: right; margin-top: 20px;" >
+        <h2>Total: <span id="total-amount">0</span> dh</h2>
+    </div>
+
+    <template id="cart-item-template">
+        <tr class="cart-item">
+            <td style="display: flex; align-items: center; gap: 15px;">
+                <img src="" alt="Product">
+                <span class="product-name"></span>
+            </td>
+            <td class="product-price"></td>
+                <td>
+                    <div class="quantity-control">
+                        <button class="decrease-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increase-btn">+</button>
+                    </div>
+                </td>
+            <td class="item-total"></td>
+            <td>
+                <button class="remove-btn">×</button>
+            </td>
+        </tr>
+    </template>
+
+    <script src="panier.js"></script>
+</body>
+</html>
